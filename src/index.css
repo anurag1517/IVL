@@ -55,9 +55,10 @@ button, input { font-family: inherit; }
 .animate-fade-in { animation: fadeIn 0.4s ease forwards; }
 
 .page-container {
-  max-width: 1200px;
+  width: 100%;
+  max-width: min(95%, 1400px);
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 3rem 15px; /* Mobile baseline */
   min-height: calc(100vh - 80px);
 }
 
@@ -69,7 +70,17 @@ button, input { font-family: inherit; }
   letter-spacing: 1px;
 }
 
-@media (max-width: 768px) {
-  .page-container { padding: 2rem 1rem; }
+/* Base Mobile Overrides */
+@media (max-width: 600px) {
   .page-title { font-size: 2rem; margin-bottom: 1.5rem; }
+}
+
+/* Tablet Up */
+@media screen and (min-width: 600px) {
+  .page-container { padding: 3rem 2rem; }
+}
+
+/* Laptop Up */
+@media screen and (min-width: 960px) {
+  .page-container { padding: 3rem 3rem; }
 }

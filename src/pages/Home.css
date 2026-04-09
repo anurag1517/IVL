@@ -63,7 +63,7 @@
   border-color: var(--color-text-muted);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .home-container { padding: 1rem; }
   .hero-title { font-size: 2.2rem; }
   .hero-subtitle { font-size: 1rem; margin-bottom: 2rem; }

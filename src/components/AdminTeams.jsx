@@ -38,6 +38,13 @@ const AdminTeams = () => {
     }
   };
 
+  const handleResetTeam = async (id) => {
+    if(window.confirm('Are you sure you want to reset all stats to 0 for this team?')) {
+      await updateTeam(id, { played: 0, won: 0, lost: 0, points: 0, pointsDiff: 0 });
+      fetchTeams();
+    }
+  };
+
   if (loading) return <div>Loading teams...</div>;
 
   return (
@@ -59,12 +66,21 @@ const AdminTeams = () => {
           <div key={team.id} className="team-admin-card glass-panel">
             <div className="team-header">
               <h3>{team.name}</h3>
-              <button 
-                onClick={() => handleDeleteTeam(team.id)} 
-                className="btn-danger"
-              >
-                Delete
-              </button>
+              <div style={{ display: 'flex', gap: '1rem' }}>
+                <button 
+                  onClick={() => handleResetTeam(team.id)} 
+                  className="btn-secondary"
+                  style={{ borderColor: 'var(--color-secondary)', color: 'var(--color-secondary)' }}
+                >
+                  Reset
+                </button>
+                <button 
+                  onClick={() => handleDeleteTeam(team.id)} 
+                  className="btn-danger"
+                >
+                  Delete
+                </button>
+              </div>
             </div>
             <div className="team-stats-controls">
               <div className="stat-control">

@@ -58,7 +58,7 @@
   border: 1px solid var(--color-primary-glow);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .login-box {
     padding: 2rem 1.5rem;
     max-width: 90%;

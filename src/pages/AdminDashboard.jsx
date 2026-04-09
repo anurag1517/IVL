@@ -4,11 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import AdminTeams from '../components/AdminTeams';
 import AdminSchedule from '../components/AdminSchedule';
+import AdminLiveMatch from '../components/AdminLiveMatch';
 import './AdminDashboard.css';
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState('schedule');
+  const [activeTab, setActiveTab] = useState('live');
 
   const handleLogout = async () => {
     try {
@@ -28,21 +29,29 @@ const AdminDashboard = () => {
       
       <div className="admin-tabs">
         <button 
+          className={`tab-btn ${activeTab === 'live' ? 'active' : ''}`}
+          onClick={() => setActiveTab('live')}
+        >
+          Live Match
+        </button>
+        <button 
           className={`tab-btn ${activeTab === 'schedule' ? 'active' : ''}`}
           onClick={() => setActiveTab('schedule')}
         >
           Manage Schedule
         </button>
         <button 
-          className={`tab-btn ${activeTab === 'teams' ? 'active' : ''}`}
-          onClick={() => setActiveTab('teams')}
+          className={`tab-btn ${activeTab === 'points' ? 'active' : ''}`}
+          onClick={() => setActiveTab('points')}
         >
           Manage Points Table
         </button>
       </div>
 
       <div className="admin-body">
-        {activeTab === 'schedule' ? <AdminSchedule /> : <AdminTeams />}
+        {activeTab === 'schedule' && <AdminSchedule />}
+        {activeTab === 'points' && <AdminTeams />}
+        {activeTab === 'live' && <AdminLiveMatch />}
       </div>
     </div>
   );

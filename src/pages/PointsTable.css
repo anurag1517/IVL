@@ -50,7 +50,7 @@
   color: var(--color-text-muted);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .points-table th, .points-table td {
     padding: 0.8rem 0.5rem;
     font-size: 0.9rem;

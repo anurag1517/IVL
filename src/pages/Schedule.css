@@ -69,7 +69,7 @@
   width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .schedule-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;

@@ -118,7 +118,7 @@
   box-shadow: 0 0 10px rgba(255, 71, 87, 0.4);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .admin-header {
     flex-direction: column;
     gap: 1.5rem;
@@ -141,4 +141,28 @@
     align-items: flex-start;
   }
   .add-form input { margin-bottom: 0.5rem; }
+}
+
+/* Live Match Tracker Styles */
+.live-setup { padding: 2rem; max-width: 500px; margin: 0 auto; text-align: center; }
+.live-tracker { padding: 2rem; text-align: center; }
+.tracker-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 2rem; }
+.tracker-header h3 span { color: var(--color-text-muted); font-size: 0.9rem; font-weight: normal; margin-left: 0.5rem; }
+.scoreboard { display: flex; justify-content: center; align-items: center; gap: 3rem; margin-bottom: 3rem; }
+.team-board { flex: 1; max-width: 200px; }
+.team-board h4 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-secondary); }
+.score-display { font-size: 4rem; font-family: var(--font-heading); font-weight: 800; background: var(--color-bg-base); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-color); margin-bottom: 1rem; }
+.score-controls { display: flex; justify-content: space-between; gap: 1rem; }
+.score-controls button { flex: 1; font-size: 1.5rem; font-weight: 800; }
+.vs-divider { font-size: 1.5rem; font-weight: 800; color: var(--color-primary); background: rgba(255, 42, 95, 0.1); padding: 1rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; }
+.previous-sets { background: var(--color-bg-base); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--border-color); }
+.previous-sets h4 { margin-bottom: 1rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
+.set-result { font-weight: 600; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.set-result:last-child { border-bottom: none; }
+.match-actions { display: flex; justify-content: center; gap: 1rem; }
+
+@media (max-width: 960px) {
+  .scoreboard { flex-direction: column; gap: 1.5rem; }
+  .vs-divider { margin: 1rem auto; padding: 0.5rem; width: 40px; height: 40px; font-size: 1rem; }
+  .match-actions { flex-direction: column; }
 }
