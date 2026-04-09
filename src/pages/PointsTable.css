@@ -1,0 +1,60 @@
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+}
+
+.points-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.points-table th, .points-table td {
+  padding: 1.2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.points-table th {
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.points-table tbody tr {
+  transition: background-color 0.2s;
+}
+
+.points-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.points-table tbody tr:last-child td { border-bottom: none; }
+
+.team-name {
+  font-weight: 600;
+  color: var(--color-text-main);
+  font-size: 1.1rem;
+}
+
+.team-points {
+  color: var(--color-primary);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.text-center {
+  text-align: center;
+  padding: 2rem !important;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+  .points-table th, .points-table td {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.9rem;
+  }
+  .team-name { font-size: 1rem; }
+  .team-points { font-size: 1rem; }
+}

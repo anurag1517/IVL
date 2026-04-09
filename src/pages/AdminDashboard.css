@@ -1,0 +1,144 @@
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.admin-header .page-title { margin-bottom: 0; }
+
+.admin-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  background: transparent;
+  color: var(--color-text-muted);
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover, .tab-btn.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.add-form {
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.add-form.flex-column {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-row input { flex: 1; }
+
+.add-form input {
+  padding: 0.8rem;
+  background: var(--color-bg-base);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--color-text-main);
+}
+
+.team-admin-card, .match-admin-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.team-header, .match-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.team-stats-controls {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stat-control span { width: 90px; }
+
+.stat-control button {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  background: var(--color-bg-base);
+  border: 1px solid var(--border-color);
+  color: var(--color-text-main);
+  cursor: pointer;
+}
+
+.stat-control button:hover { background: var(--color-bg-surface-light); }
+
+.btn-danger {
+  background: transparent;
+  color: #ff4757;
+  border: 1px solid #ff4757;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-danger:hover {
+  background: #ff4757;
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 71, 87, 0.4);
+}
+
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  .admin-tabs { flex-wrap: wrap; gap: 0.5rem; }
+  .tab-btn { font-size: 0.9rem; padding: 0.5rem; }
+  .form-row, .add-form, .team-admin-card, .match-admin-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .team-header, .match-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .team-stats-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .add-form input { margin-bottom: 0.5rem; }
+}
